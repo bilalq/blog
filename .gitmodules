@@ -1,0 +1,4 @@
+[submodule "/.themes/slash"]
+  path = .themes/slash
+  url = git://github.com/tommy351/Octopress-Theme-Slash.git
+  ignore = dirty
