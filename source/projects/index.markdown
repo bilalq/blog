@@ -2,4 +2,10 @@
 layout: default
 ---
 
-I'll build this page later. It's held me back from blogging for far too long.
+## [SlamWhale](http://slamwhale.com)
+
+## [Villustrator](http://villustrator.com)
+
+## Trendy
+
+## RU Scheduled
