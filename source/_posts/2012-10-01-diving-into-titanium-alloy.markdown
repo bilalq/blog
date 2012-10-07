@@ -3,6 +3,7 @@ layout: post
 title: "Diving Into Titanium Alloy"
 date: 2012-10-01 13:09
 comments: true
+keywords: "Titanium, Alloy, Appcelerator, Mobile, Android, iOS"
 categories: [Technology, Programming, Titanium, Mobile, Alloy]
 ---
 
@@ -29,13 +30,14 @@ in backbone.js for structure, while others modelled their applications after
 [Tweetanium](https://github.com/appcelerator-titans/tweetanium). I found both
 approaches to be a bit unclear, so I personally avoided them.
 
-These past few months, however, the [Appcelerator](http://appcelerator.com) has
+These past few months, however, [Appcelerator](http://appcelerator.com) has
 been working on an MVC framework for developers to use. Right now, it's only
 at a pre-release stage. There's no thorough documentation or anything of the
 sort, but the core APIs shouldn't be changing much. I've been working on a
 Titanium app with a few other people, and we recently decided to scrap our code
-and roll with [Alloy](https://github.com/appcelerator/alloy). Read on to see
-what the first day with Alloy was like.
+and roll with [Alloy](https://github.com/appcelerator/alloy). Since there's no
+documentation, this may sound masochistic, but we felt that it would be worth it
+in the long run. Read on to see what the first day with Alloy was like.
 
 
 
@@ -84,17 +86,74 @@ First, add these two lines to the gitignore:
     !Resources/.gitkeep
 
 After that, I created a Rakefile in my app folder to handle compilation,
-running, and recreation of the .gitkeep file. I know, I know, Rake seems out of
-place here, but typing rake has become second nature to me, so I went with it.
-Feel free to write up your own variation of this:
+execution, and recreation of the .gitkeep file. Alloy technically supports an
+alloy.jmk file that you should be able to configure with pre and post compile
+tasks, but I still haven't gotten around to figuring out how it works. I'm sure
+there are better ways to go about this, but this little hack works.
 
 ``` ruby Rakefile
 
+require 'rake'
+
+# iOS
 task :default do
-  sh 'alloy compile'
-  sh 'alloy run'
-  sh 'touch ' + File.dirname(__FILE__) + '/../Resources/.gitkeep'
+  begin
+    sh 'alloy compile'
+    sh 'alloy run'
+    sh 'touch ' + File.dirname(__FILE__) + '/../Resources/.gitkeep'
+  rescue
+    puts '======================================================'
+    puts '                       Failed                         '
+    puts '======================================================'
+  end
 end
+
+# Android
+task :andy do
+  begin
+    sh 'alloy compile --config platform=android'
+    sh 'alloy run ../ android'
+    sh 'touch ' + File.dirname(__FILE__) + '/../Resources/.gitkeep'
+  rescue
+    puts '======================================================'
+    puts '                       Failed                         '
+    puts '======================================================'
+  end
+end
+
 ```
 
 And with that, you no longer have to deal with excess baggage in your git repo.
+Running `rake` and `rake andy` is something even non-programmers working with
+you should be able to do.
+
+Once that was out of the way, we were able to start working on our app. Being
+able to express our layout through XML was a godsend. Hearing about that
+feature alone made me want to transition to Alloy. There's a lot of other cool
+things that it brings to the table, but you can read more about that on the
+readme for the project.
+
+I can say with confidence that Alloy did increase the quality and transparency
+of our code base. Things that previously took hundreds of lines dropped to just
+a few dozen.
+
+
+###Final Thoughts
+
+Alloy is a sorely needed addition to the Titanium platform. Once it's actually
+released, I'm sure it will catch on very quickly. I'd advise waiting out for
+documentation before adopting it in production apps though. There's quite a bit
+of frustration that comes with not having a friendly resource to turn to. That
+being said, there are some links that can help you get started, which you can
+find at the bottom of this post.
+
+
+
+### Resources for learning
+* [Github](https://github.com/appcelerator/alloy):
+  The readme is a nice primer, and you can always look at the source code if
+  you want to.
+* [Alloy quickstart](http://projects.appcelerator.com/alloy/docs/Alloy-bootstrap/index.html):
+  A quick start guide from Appcelerator. A little vague at times, but still
+  very helpful.
+*
