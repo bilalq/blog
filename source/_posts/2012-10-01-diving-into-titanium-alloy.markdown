@@ -1,4 +1,4 @@
----
+:--
 layout: post
 title: "Diving Into Titanium Alloy"
 date: 2012-10-01 13:09
@@ -18,7 +18,7 @@ means is that you'll write your application logic once, and then design the UI
 elements for each platform separately (while recycling the common elements
 wherever you can).
 
-This all sounds well and good, but there are some problems you'll notice if you
+This sounds amazing at first, but there are some problems you'll notice if you
 try using it. For starters, it's difficult to understand what best practices
 are. Tutorials and screencasts you find often reference outdated APIs or
 techniques, leaving you wondering what went wrong. Even more problematic, there
@@ -28,7 +28,8 @@ that UI logic and styling all had to be done programatically. There is no
 concept of storyboards or XML layouts for UI elements. Some made do with mixing
 in backbone.js for structure, while others modelled their applications after
 [Tweetanium](https://github.com/appcelerator-titans/tweetanium). I found both
-approaches to be a bit unclear, so I personally avoided them.
+approaches to be a bit unclear, so I personally avoided them and rolled with my 
+own structure.
 
 These past few months, however, [Appcelerator](http://appcelerator.com) has
 been working on an MVC framework for developers to use. Right now, it's only
@@ -38,7 +39,6 @@ Titanium app with a few other people, and we recently decided to scrap our code
 and roll with [Alloy](https://github.com/appcelerator/alloy). Since there's no
 documentation, this may sound masochistic, but we felt that it would be worth it
 in the long run. Read on to see what the first day with Alloy was like.
-
 
 
 
@@ -76,7 +76,7 @@ searched around, and [this](http://jira.appcelerator.org/browse/TIMOB-10991) is
 what I came up with. For those unwilling to click on links, it's basically an
 issue that prevents Alloy from compiling if the Resources folder doesn't exist.
 That's fair enough, but it would still be trivial to ignore everything other
-than a .gitkeep file from the directory. It turns out, however, that Alloy
+than a dummy file from the directory. It turns out, however, that Alloy
 erases and recreates the Resources folder on each compilation. Weird. But
 there's an easy enough way to work around this.
 
@@ -89,7 +89,8 @@ After that, I created a Rakefile in my app folder to handle compilation,
 execution, and recreation of the .gitkeep file. Alloy technically supports an
 alloy.jmk file that you should be able to configure with pre and post compile
 tasks, but I still haven't gotten around to figuring out how it works. I'm sure
-there are better ways to go about this, but this little hack works.
+there are better ways to go about this, and this may as well have just been a 
+shell script, but this little hack works.
 
 ``` ruby Rakefile
 
@@ -133,19 +134,20 @@ feature alone made me want to transition to Alloy. There's a lot of other cool
 things that it brings to the table, but you can read more about that on the
 readme for the project.
 
-I can say with confidence that Alloy did increase the quality and transparency
-of our code base. Things that previously took hundreds of lines dropped to just
-a few dozen.
-
 
 ###Final Thoughts
+
+I can say with confidence that Alloy did increase the quality and transparency
+of our code base. Things that previously took hundreds of lines dropped to just
+a few dozen. I'm excited about the direction Alloy is going in.
 
 Alloy is a sorely needed addition to the Titanium platform. Once it's actually
 released, I'm sure it will catch on very quickly. I'd advise waiting out for
 documentation before adopting it in production apps though. There's quite a bit
 of frustration that comes with not having a friendly resource to turn to. That
-being said, there are some links that can help you get started, which you can
-find at the bottom of this post.
+being said, there are some links that can help you get started, which I've 
+listed below.
+
 
 
 
@@ -156,4 +158,10 @@ find at the bottom of this post.
 * [Alloy quickstart](http://projects.appcelerator.com/alloy/docs/Alloy-bootstrap/index.html):
   A quick start guide from Appcelerator. A little vague at times, but still
   very helpful.
-*
+* [Projects on Github that used Alloy ](https://github.com/aaronksaunders):
+  I'm sure you can find more of these, but this is the profile of someone I saw 
+  that had a few Alloy apps under his belt.
+* [StackOverflow](http://stackoverflow):
+  This might seem obvious to many, but StackOverflow is a great resource. Even
+  bleeding edge frameworks like Alloy have questions being asked and answered
+  about.
