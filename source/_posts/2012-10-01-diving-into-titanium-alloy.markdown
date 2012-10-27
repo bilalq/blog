@@ -1,4 +1,4 @@
-:--
+---
 layout: post
 title: "Diving Into Titanium Alloy"
 date: 2012-10-01 13:09
@@ -6,6 +6,9 @@ comments: true
 keywords: "Titanium, Alloy, Appcelerator, Mobile, Android, iOS"
 categories: [Technology, Programming, Titanium, Mobile, Alloy]
 ---
+
+#NOTE: THIS IS NOW OUTDATED
+##_I'm happy to report that Alloy is now production ready. I'll be updating this post once I go through the new docs._
 
 ###Titanium
 
