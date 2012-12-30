@@ -1,0 +1,71 @@
+img.me {
+  border-radius: 40px;
+  /*box-shadow: 2px 2px 4px 10px #444;*/
+  /*border-radius: 10px;*/
+  /*[>filter: grayscale(100%);<]*/
+  /*[>-webkit-filter: grayscale(100%);<]*/
+  /*[>-moz-filter: grayscale(100%);<]*/
+  /*[>-ms-filter: grayscale(100%);<]*/
+  /*[>-o-filter: grayscale(100%);<]*/
+}
+
+/*div#hello:hover img.me {*/
+  /*[>filter: grayscale(0);<]*/
+  /*[>-webkit-filter: grayscale(0);<]*/
+  /*[>-moz-filter: grayscale(0);<]*/
+  /*[>-ms-filter: grayscale(0);<]*/
+  /*[>-o-filter: grayscale(0);<]*/
+/*}*/
+
+/*#my-photo, img.me, h1 {*/
+  /*[>float: left;<]*/
+/*}*/
+
+/*div.page {*/
+  /*font-size: 45pt;*/
+  /*font-weight: 100;*/
+/*}*/
+
+/*.huge {*/
+  /*font-size: 80pt;*/
+  /*font-weight: 100;*/
+  /*padding-top: 0;*/
+  /*margin-top: 0;*/
+  /*[>float: right;<]*/
+  /*padding-left: 20px;*/
+  /*padding-right: 100px;*/
+/*}*/
+
+/*div.page {*/
+  /*[>padding-top: 20px;<]*/
+  /*min-height: 400px;*/
+  /*text-align: center;*/
+/*}*/
+
+/*.colored {*/
+  /*color: rgba(125, 169, 226, 0.8);*/
+/*}*/
+
+/*.spaced {*/
+  /*padding-top: 30px;*/
+  /*padding-bottom: 30px;*/
+/*}*/
+
+/*.centered {*/
+/*}*/
+
+/*@media only screen and (min-width: 650px) {*/
+  /*.huge {*/
+    /*[>padding-top: 90px;<]*/
+    /*[>float: right;<]*/
+  /*}*/
+
+  /*#hello {*/
+    /*padding-left: 100px;*/
+  /*}*/
+
+  /*div.page {*/
+    /*min-height: 300px;*/
+  /*}*/
+/*}*/
+

@@ -2,17 +2,18 @@
 layout: home
 ---
 
-{% assign index = true %}
-{% for post in paginator.posts %}
-{% assign content = post.content %}
-    <article class="post">{% include article.html %}</article>
-{% endfor %}
-<nav id="pagenavi">
-    {% if paginator.previous_page %}
-        <a href="{{paginator.previous_page}}" class="prev">Prev</a>
-    {% endif %}
-    {% if paginator.next_page %}
-        <a href="{{paginator.next_page}}" class="next">Next</a>
-    {% endif %}
-    <div class="center"><a href="{{ root_url }}/blog/archives">Blog Archives</a></div>
-</nav>
+<div class="page" id="hello">
+  <div id="my-photo">
+    <h1 class="huge">I'm Bilal Quadri</h1>
+    <img class="me" src="/images/me.png"/>
+  </div>
+</div>
+
+<div class="page centered">
+  <div>
+    I'm a <span class="colored">student</span> and <span class="colored">developer</span>.
+</div>
+  <div class="spaced">
+    I do both <span class="colored">mobile</span> and <span class="colored">web</span>.
+  </div>
+</div>
