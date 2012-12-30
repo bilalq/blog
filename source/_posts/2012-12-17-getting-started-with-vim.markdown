@@ -24,6 +24,7 @@ it's so difficult to do basic things. You will be confused. You may even be
 frightened. It'll take some time, but the rewards will prove to be worth it in
 the end.
 
+<!--more-->
 
 ## Get What You Need ##
 The first step on your journey is to get Vim on your machine. If you're running
