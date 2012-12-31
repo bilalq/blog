@@ -7,7 +7,6 @@ published: true
 categories: [Vim, Productivity]
 ---
 
-## Introduction ##
 This is a brief guide to get you acquainted with using Vim in the terminal. If
 you're reading this, you've probably heard of Vim already. For those that
 haven't, it's a text-editor that's a bit different than most. It's optimized for
