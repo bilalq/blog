@@ -45,6 +45,10 @@ that, open up a terminal and type in this command:
 
 `brew install macvim --override-system-vim`
 
+Both of these install instructions also get you GUI versions of Vim. They can be
+a bit nicer in terms of appearance, but you lose out on the flexibility of being
+in a terminal if you choose to go with them.
+
 
 ## Play Around ##
 You can only get so much out of reading guides and blogposts. Now that you have
@@ -56,12 +60,13 @@ This will launch an interactive guide. I know it says that it should take about
 30 minutes to go through it, but don't be afraid to take longer if you need it.
 Go through it completely before coming back to this guide.
 
-## Increasing Understanding ##
+## Improve Your Understanding ##
 Having gone through `vimtutor`, you should have some familiarity with Vim. It's
 perfectly normal to not remember most things. Below, you'll find a quick
 cheatsheet of the more useful commands in normal mode. Wherever you see a
-`<CR>`, take that to mean "Hit the Enter/Return key". Oh, and remember that
-escape will take you back into Normal mode.
+`<CR>`, take that to mean "Hit the Enter/Return key". It stands for "carriage
+return" if you were curious. Oh, and remember that escape will take you back
+into Normal mode.
 
     :q<CR>      quit
     :q!<CR>     quit without saving
@@ -76,7 +81,7 @@ should be enough to get you started. If you have to stop and look up how to do
 something every now and then, it's fine.
 
 
-## Customizing Vim##
+## Customize Vim ##
 
 Part of the reason why Vim is so well-loved is because of how customizable it
 is. Linux and OSX users can save these settings in a file called `.vimrc` that
@@ -90,7 +95,7 @@ them is to actually change them. Welcome to the Wonderful World of Vimscript.
 
 Below here, I have a simple `.vimrc` file that I like to give out to people just
 getting started with Vim. Feel free to take it and run with it. It's pretty well
-commented, so this should be enough to get you started. 
+commented, so this should be enough to get you started.
 
 ``` vim .vimrc
 "A simple vimrc that I give to people just starting to use Vim."
@@ -142,12 +147,12 @@ inoremap jj <Esc>`^
 filetype plugin indent on
 ```
 
-## Further Reading ##
+## Keep Learning ##
 
 I'll probably write more about Vim in the future, but there are plenty of other
-resources around if you're interested in learning more. There's no substitute 
+resources around if you're interested in learning more. There's no substitute
 for actual experience though.
 
-* [VimCasts](http://vimcasts.org) 
+* [VimCasts](http://vimcasts.org)
 * [Vim Adventures](http://vim-adventures.com/)
 * [TutsPlus Links](http://net.tutsplus.com/articles/web-roundups/25-vim-tutorials-screencasts-and-resources/)
