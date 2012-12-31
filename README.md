@@ -1,3 +1,4 @@
-#Redesign of the site#
+My Blog
+=======
 
-Starting from stratch. Purely static site built on Jekyll/Octopress.
+This be the blog of Bilal Quadri.
