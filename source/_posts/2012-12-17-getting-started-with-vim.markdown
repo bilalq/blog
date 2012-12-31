@@ -4,7 +4,7 @@ title: "Getting Started with Vim"
 date: 2012-12-17 21:36
 comments: true
 published: true
-categories: [Vim, Productivity]
+categories: [Vim, Productivity, Guide]
 ---
 
 This is a brief guide to get you acquainted with using Vim in the terminal. If
