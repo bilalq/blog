@@ -26,11 +26,11 @@ img.me {
 }
 
 .huge {
-  font-size: 70pt;
+  font-size: 62pt;
   font-weight: 100;
   margin-top: 0;
   float: left;
-  padding-left: 12px;
+  /*padding-left: 12px;*/
 }
 
 .spaced {
@@ -39,6 +39,7 @@ img.me {
 
 @media only screen and (min-width: 650px) {
   .huge {
+    font-size: 70pt;
     padding-top: 90px;
     padding-left: 20px;
     padding-right: 100px;
