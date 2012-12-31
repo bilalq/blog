@@ -26,7 +26,9 @@ you have:
 
 <!--more-->
 
+
 ## Setting up Apache ##
+
 If you already have Apache set up, you can skip this section. I'm writing this
 guide under the assumption you're not running MAMP. I've never used it myself,
 so I can't guarantee this guide will work for you if you are.
@@ -90,10 +92,10 @@ apache by running `sudo apachectl restart`.
 
 
 ## Installing mcrypt ##
+
 Laravel makes use of an encryption module called mcrypt that is not installed by
-default on OSX. For people familiar with some PHP experience, this is probably 
-the point where you want to start paying attention. You can check if you have 
-the mcrpyt module in PHP by running this command in a terminal:
+default on OSX. You can check if you have the mcrpyt module in PHP by running 
+this command in a terminal:
 
     php -m | grep mcrypt
 
@@ -139,7 +141,9 @@ All that's left is to restart Apache, and we're all done:
 
     apachectl restart
 
+
 ## Starting Your First Laravel Project ##
+
 Now that all the litle configuration details are taken care of, we can move on
 to the stuff you actually care about. At this point, you can pretty much follow
 the instructions found on the
