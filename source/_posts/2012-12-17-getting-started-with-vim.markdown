@@ -17,7 +17,7 @@ code base, you're in `NORMAL MODE`.When you want to type in text, you go into
 `INSERT MODE`. This talk of modes might not make sense just yet, but read on,
 and you will see the light.
 
-I won't lie to you, Vim has a steep learning curve. It can intimidating at
+I won't lie to you, Vim has a steep learning curve. It can be intimidating at
 first, even daunting. In the beginning, you will feel sluggish, wondering why
 it's so difficult to do basic things. You will be confused. You may even be
 frightened. It'll take some time, but the rewards will prove to be worth it in
