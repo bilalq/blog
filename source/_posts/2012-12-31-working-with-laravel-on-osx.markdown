@@ -83,6 +83,12 @@ with your\_project\_name\_here.dev as a subdirectory in there. Now if you open
 up a browser and go to `http://your_project_name_here.dev`, you'll see it
 displaying the contents of the index.html file there.
 
+This auto-generated virtualhost file would be fine for most projects, but 
+Laravel uses a different DocumentRoot by default for some extra security. Run 
+`sudo vim /etc/apache2/virtualhosts/your_project_name_here.dev` and add 
+`/public` to the end of the value of the DocumentRoot. After you save and quit,
+run `sudo apachectl restart`.
+
 You can create virtualhosts for other projects the same way. Something to note:
 You might start getting apache errors if the `logs` folder in one of these
 virtualhosts ever gets deleted. If you run into this problem, you can either
