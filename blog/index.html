@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<h1 class="content-subhead">Recent Posts</h1>
+
+<div class="posts">
+  {% for post in site.posts %}
+    <section class="post">
+      <header class="post-header">
+        <h2 class="post-title">
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h2>
+        <p class="post-meta">
+          <small class="content-subhead">{{ post.date | date_to_string }}</small>  
+          {% for category in post.categories %}
+            <a class="post-category post-category-{{ category }}" href="/blog/categories/{{ category }}">
+              {{ category }}
+            </a>
+          {% endfor %}
+        </p>
+      </header>
+      <div class="post-description">
+        {% if post.content contains "<!-- more -->" %}
+          {{ post.content | split:"<!-- more -->" | first % }}
+          <p class="read-on"><a href="{{ post.url }}">Read On</a></p>
+        {% elsif post.content contains "<!--more-->" %}
+          {{ post.content | split:"<!--more-->" | first % }}
+          <p class="read-on"><a href="{{ post.url }}">Read On</a></p>
+        {% else %}
+          {{ post.content }}
+        {% endif %}
+      </div>
+    </section>
+  {% endfor %}
+</div>
