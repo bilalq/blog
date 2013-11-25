@@ -11,7 +11,7 @@ layout: default
       <p class="post-meta">
         <small class="content-subhead">{{ page.date | date_to_string }}</small>
         {% for category in page.categories %}
-          <a class="post-category post-category-{{ category }}" href="/blog/categories/{{ category }}">
+          <a class="post-category post-category-{{ category }}" href="/blog/categories#{{ category }}">
             {{ category }}
           </a>
         {% endfor %}
@@ -38,5 +38,8 @@ layout: default
       <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
       <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     {% endif %}
+  </section>
+  <section class="license">
+    <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
   </section>
 </div>

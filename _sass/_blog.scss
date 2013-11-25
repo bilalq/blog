@@ -1,15 +1,21 @@
-$sidebar-bg: rgb(4, 13, 41);
-/*$sidebar-bg: rgb(24, 33, 61);*/
+$sidebar-bg: lighten(rgb(21, 49, 66), 0%);
+$sidebar-fg: rgb(57, 133, 183);
+$sidebar-btn-color: rgb(47, 106, 143);
+$link-color: $sidebar-fg;
 
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
     text-decoration: none;
-    color: rgb(142, 142, 214);
+    color: $link-color;
+    &:hover {
+      color: lighten($link-color, 10%);
+    }
 }
 a:hover,
 a:focus {
@@ -47,7 +53,8 @@ a:focus {
 }
 .brand-tagline {
     font-weight: 300;
-    color: rgb(142, 142, 214);
+    color: $sidebar-fg;
+    /*color: rgb(142, 142, 214);*/
 }
 
 .nav-list {
@@ -62,14 +69,17 @@ a:focus {
 }
 .nav-item a {
     background: transparent;
-    border: 3px solid rgb(103, 103, 180);
+    /*border: 3px solid rgb(103, 103, 180);*/
+    border: 3px solid $sidebar-btn-color;
     color: #fff;
     margin-top: 1em;
 }
 .nav-item a:hover,
 .nav-item a:focus {
-    border: 3px solid rgb(142, 142, 214);
-    color: rgb(142, 142, 214);
+    /*border: 3px solid rgb(142, 142, 214);*/
+    border: 3px solid lighten($sidebar-btn-color, 10%);
+    color: $sidebar-fg;
+    /*color: rgb(142, 142, 214);*/
     text-decoration: none;
 }
 
@@ -89,19 +99,27 @@ a:focus {
 
 .post {
     padding-bottom: 2em;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+
 .post-title {
-    font-size: 2em;
-    color: #222;
-    margin-bottom: 0.2em;
+  font-size: 2em;
+  color: #222;
+  margin-bottom: 0.2em;
+  font-weight: 200;
+  a {
+    color: darken($sidebar-fg, 10%);
+    &:hover { color: darken($sidebar-fg, 5%) }
+  }
 }
+
 .post-avatar {
     border-radius: 50px;
     float: right;
     margin-left: 1em;
 }
 .post-description {
-    font-family: Georgia, "Cambria", serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #444;
     line-height: 1.8em;
 }
@@ -117,6 +135,7 @@ a:focus {
     color: #fff;
     background: #999;
     font-size: 80%;
+    &:hover { color: white; }
 }
 
 .post-category-productivity {
@@ -129,6 +148,9 @@ a:focus {
   background: #8156a7;
 }
 .post-category-laravel {
+  background: #f47063;
+}
+.post-category-rails {
   background: #df2d4f;
 }
 .post-category-osx {
@@ -191,9 +213,13 @@ h1.brand-title {
   }
 }
 
-h2.post-title {
-  a {
-    color: #222;
+.post-link {
+  color: #222;
+}
+
+@media (min-width: 768px) {
+  .content {
+      padding: 1em 2em 0;
   }
 }
 
@@ -206,8 +232,13 @@ h2.post-title {
 }
 
 .post {
-  h2 {
-    font-family: Helvetica, Arial, sans-serif;
+  h1 {
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+  h1, h2 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
   }
 
   @media (min-width: 768px) {
@@ -216,4 +247,43 @@ h2.post-title {
       &.post-meta { padding-left: 0; }
     }
   }
+}
+
+.license {
+  text-align: center;
+  font-size: 0.8em;
+  padding: 40px 0;
+}
+
+.home {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    header {
+      margin-bottom: 60px;
+    }
+
+    h1 {
+      font-weight: 200;
+      display: inline;
+    }
+
+    .profile-photo {
+      width: 100%;
+      max-width: 112px;
+      border-radius: 56px;
+      position: relative;
+      top: 30px;
+    }
+
+
+    p {
+      padding-left: 40px;
+      padding-top: 15px;
+    }
+
+    .disclaimer {
+      margin-top: 100px;
+      font-size: 0.8em;
+      color: #aaa;
+    }
 }

@@ -3,11 +3,26 @@ layout: default
 title: Bilal Quadri
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<div class="home">
+
+  <header>
+    <img class="profile-photo" src="/img/me.png" alt="Photo of Bilal" />
+    <h1>Hey there!</h1>
+  </header>
+
+  <p>
+    I'm Bilal, a software engineer at
+    <a href="http://aws.amazon.com/">Amazon Web Services</a> and an alumnus of
+    <a href="http://www.rutgers.edu/">Rutgers University</a>.
+  </p>
+
+  <p>
+    I drink tea, not coffee.
+    If you want to get in touch with me, hit me up on Twitter.
+  </p>
+
+  <p class="disclaimer">
+    <strong>Disclaimer:</strong>
+    All opinions expressed here represent my own and not those of my employer.
+  </p>
 </div>

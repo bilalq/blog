@@ -1,11 +1,13 @@
 ---
 layout: post
 title: "Working with Laravel on OSX"
-date: 2012-12-31 02:00
+date: 2012-12-31 04:00
 comments: true
 published: true
-categories: [PHP, Laravel, OSX]
+categories: PHP Laravel OSX
 ---
+
+<small>Note: This guide was written for Laravel 3.</small>
 
 In case you haven't heard, PHP is becoming cool again. I say this as a joke, but
 there's a ring of truth to it. With the advent of things like Composer, PSRs,
@@ -83,9 +85,9 @@ with your\_project\_name\_here.dev as a subdirectory in there. Now if you open
 up a browser and go to `http://your_project_name_here.dev`, you'll see it
 displaying the contents of the index.html file there.
 
-This auto-generated virtualhost file would be fine for most projects, but 
-Laravel uses a different DocumentRoot by default for some extra security. Run 
-`sudo vim /etc/apache2/virtualhosts/your_project_name_here.dev` and add 
+This auto-generated virtualhost file would be fine for most projects, but
+Laravel uses a different DocumentRoot by default for some extra security. Run
+`sudo vim /etc/apache2/virtualhosts/your_project_name_here.dev` and add
 `/public` to the end of the value of the DocumentRoot. After you save and quit,
 run `sudo apachectl restart`.
 
@@ -100,7 +102,7 @@ apache by running `sudo apachectl restart`.
 ## Installing mcrypt ##
 
 Laravel makes use of an encryption module called mcrypt that is not installed by
-default on OSX. You can check if you have the mcrpyt module in PHP by running 
+default on OSX. You can check if you have the mcrpyt module in PHP by running
 this command in a terminal:
 
     php -m | grep mcrypt

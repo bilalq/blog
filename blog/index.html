@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Bilal Quadri | Blog
 ---
 
 <h1 class="content-subhead">Recent Posts</h1>
@@ -9,12 +10,12 @@ layout: default
     <section class="post">
       <header class="post-header">
         <h2 class="post-title">
-          <a href="{{ post.url }}">{{ post.title }}</a>
+          <a href="{{ post.url }}/">{{ post.title }}</a>
         </h2>
         <p class="post-meta">
-          <small class="content-subhead">{{ post.date | date_to_string }}</small>  
+          <small class="content-subhead">{{ post.date | date_to_string }}</small>
           {% for category in post.categories %}
-            <a class="post-category post-category-{{ category }}" href="/blog/categories/{{ category }}">
+            <a class="post-category post-category-{{ category }}" href="/blog/categories/#{{ category }}">
               {{ category }}
             </a>
           {% endfor %}

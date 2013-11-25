@@ -1,19 +1,21 @@
 .highlight {
   background-color: #efefef;
   padding: 7px 7px 7px 10px;
-  border: 1px solid #ddd;
-  -moz-box-shadow: 1px 1px rgba(0,0,0,0.1);
-  -webkit-box-shadow: 1px 1px rgba(0,0,0,0.1);
-  box-shadow: 1px 1px rgba(0,0,0,0.1);
+  /*border: 1px solid #ddd;*/
+  /*-moz-box-shadow: 1px 1px rgba(0,0,0,0.1);*/
+  /*-webkit-box-shadow: 1px 1px rgba(0,0,0,0.1);*/
+  /*box-shadow: 1px 1px rgba(0,0,0,0.1);*/
   margin: 20px 0 20px 0;
   overflow: hidden;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
   font-size: 14px;
   line-height: 1.5em;
 }
 
 p code {
   background-color: #efefef;
+  font-size: 0.9em;
+  padding: 3px;
 }
 
 pre {
@@ -26,7 +28,6 @@ pre {
 @media (max-width: 480px) {
   p code {
     white-space: pre;
-    white-space: pre wrap;
     word-wrap: break-word;
   }
 }

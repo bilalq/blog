@@ -3,3 +3,4 @@ _site
 .gist-cache
 .pygments-cache
 .DS_Store
+s3_website.yml

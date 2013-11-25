@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+
+<div class="categories">
+  {% for category in site.categories %}
+    {% assign cat = category[0] %}
+    {% assign posts = category[1] %}
+
+    <div id="category-{{ cat }}" class="hidden category">
+      <h1 id="{{ cat }}" class="content-subhead">{{ cat }}</h1>
+
+      {% for post in posts %}
+        <p>
+          <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+          <span class="content-subhead">{{ post.date | date_to_string }}</span>
+        </p>
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>
+
+<script src="/js/categories.js"></script>
