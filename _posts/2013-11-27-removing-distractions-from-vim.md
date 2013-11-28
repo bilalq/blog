@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Removing Distractions From Vim"
-date: 2013-11-25 04:00
+date: 2013-11-27 20:00
 comments: true
 published: true
 categories: Vim Productivity
