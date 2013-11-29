@@ -34,13 +34,13 @@ do anything complicated, but I ended up with a poor man's Distraction Free Mode
 ## Using LiteDFM
 
 If you're using [Vundle](https://github.com/gmarik/vundle), you can install it
-by adding this to your `.vimrc` and running `:BundleInstall`:
+by adding this to your `.vimrc` and running `:BundleInstall`.
 
 {% highlight vim %}
 Bundle 'bilalq/lite-dfm'
 {% endhighlight %}
 
-For the sake of convenience, you may want to create a mapping to toggle DFM.
+For some added convenience, you may want to create a mapping to toggle DFM.
 The one I use is:
 
 {% highlight vim %}
@@ -73,11 +73,12 @@ they appeared invisible. This isn't centering, but it does get your code away
 from the left edge of the screen.
 
 Aside from line numbers, the statusbar and ruler are also UI elements that
-toggling LiteDFM hides. Upon toggling off LiteDFM, settings revert to what they
-were before.
+toggling LiteDFM hides. If your colorscheme doesn't hide those NonText `~`
+characters that show up, this hides those too. Upon toggling off LiteDFM,
+settings revert to what they were before.
 
-It works for multiple windows as well. With a `vsplit`, it can even pass for
-centering.
+It works for multiple windows as well. With a `vsplit` in fullscreen, it can
+even pass off as being centered.
 
 At the present I'm not even sure how I'd go about softwrapping text.
 
@@ -93,7 +94,7 @@ nnoremap <Leader>Z :set numberwidth=4  set laststatus=2<CR>:hi LineNr ctermfg=10
 
 Of course, these lines were hardcoded to my current vim configuration. Making them sharable/portable required a bit of work.
 
-## Caveats
+## Known Issues
 
 There are currently two issues that I am aware of:
 
