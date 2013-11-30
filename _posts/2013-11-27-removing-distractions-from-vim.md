@@ -6,6 +6,7 @@ comments: true
 published: true
 categories: Vim Productivity
 ---
+<small>*Updated: 30 Nov 2013*</small>
 
 Sublime Text is a text editor that has rapidly grown in popularity. While I
 still prefer Vim, I love some of the features that Sublime Text has. Among them
@@ -25,13 +26,15 @@ do anything complicated, but I ended up with a poor man's Distraction Free Mode
 <!--more-->
 
 ## My usual Vim session
-<img src="/img/removing-distractions-from-vim/before.png" alt="My usual vim apperance" style="width:100%;max-width:732px;max-height:444px;" />
+<img src="/img/removing-distractions-from-vim/dfm_off.png" alt="My usual vim apperance" style="width:100%;max-width:738px;max-height:445px;" />
 
 ## My Vim with LiteDFM on
-<img src="/img/removing-distractions-from-vim/after.png" alt="Vim's apperance with LiteDFM on" style="width:100%;max-width:732px;max-height:444px;" />
+<img src="/img/removing-distractions-from-vim/dfm_on.png" alt="Vim's apperance with LiteDFM on" style="width:100%;max-width:738px;max-height:445px;" />
 
 <a name="intro"></a>
 ## Using LiteDFM
+
+You can find the source up on [GitHub](https://github.com/bilalq/lite-dfm).
 
 If you're using [Vundle](https://github.com/gmarik/vundle), you can install it
 by adding this to your `.vimrc` and running `:BundleInstall`.
@@ -52,55 +55,47 @@ last command. Changing the mode and back is a bit of a dirty hack, but it gets
 the job done. The `` `^`` keeps the cursor steady after the mode change, since
 leaving `INSERT` mode usually moves the cursor back a column.
 
-If you're a tmux user, you may also want something that will let you toggle the
-status bar there as well. Adding this line to your `.tmux.conf` should do the
-trick:
+If you're a tmux user, you may want it to toggle the status bar there as well:
 
-```
-bind-key z set -g status
-```
+{% highlight vim %}
+nnoremap <Leader>z :LiteDFMToggle<CR>:silent !tmux set status > /dev/null<CR>:redraw!<CR>
+{% endhighlight %}
 
 ## How it Works
 
 In Sublime, DFM hides all UI chrome, centers text, and soft-wraps line lengths.
-What I have here falls short of that.
+What I have here falls a bit short of that.
 
-Centering text turned out to be a bit challenging. However, there was something
-natural that offset text from the left: the line number column. By default,
-it has a width of 4, and the largest it goes is 10. I was able to make use of
-that by setting the foreground and background colors for line numbers such that
-they appeared invisible. This isn't centering, but it does get your code away
-from the left edge of the screen.
+Centering text turned out to be a bit challenging. However, there were some
+things that naturally offset text from the left: the line number and fold
+columns. By default, `numberwidth` is set to 4, and the largest it goes is 10.
+`foldcolumn` defaults to 0, and maxes at 12.  By making use of these two, I was
+able to offset by 22 columns. When you activate LiteDFM, it applies this offset
+to each window.
+
+Of course, I didn't want anything distracting in these columns, so I set the
+foreground and background colors for these such that they appeared invisible.
+This isn't centering, but it does get your code away from the left edge of the
+screen.
+
+I even made it so that you can manually override the default 22 column offset.
+All you need to do is set a variable in your `.vimrc` with a value from 1 to 22:
+
+{% highlight vim %}
+let g:lite_dfm_left_offset = 16
+{% endhighlight %}
+
 
 Aside from line numbers, the statusbar and ruler are also UI elements that
 toggling LiteDFM hides. If your colorscheme doesn't hide those NonText `~`
 characters that show up, this hides those too. Upon toggling off LiteDFM,
 settings revert to what they were before.
 
-It works for multiple windows as well. With a `vsplit` in fullscreen, it can
+This works for multiple windows as well. With a `vsplit` in fullscreen, it can
 even pass off as being centered.
 
-At the present I'm not even sure how I'd go about softwrapping text.
+## Caveat
 
-## It's Funny
-
-For a while now, I had the functional equivalent of this plugin with just 2
-lines in my `.vimrc`.
-
-{% highlight vim %}
-nnoremap <Leader>z :set numberwidth=10 set laststatus=0<CR>:hi LineNr ctermfg=237 ctermbg=237<CR>i<Esc>`^
-nnoremap <Leader>Z :set numberwidth=4  set laststatus=2<CR>:hi LineNr ctermfg=101 ctermbg=238<CR>i<Esc>`^
-{% endhighlight %}
-
-Of course, these lines were hardcoded to my current vim configuration. Making them sharable/portable required a bit of work.
-
-## Known Issues
-
-There are currently two issues that I am aware of:
-
-* If you change your colorscheme after the plugin has loaded, you will have to
-  reload it in order for it to set the correct `LineNr` colors.
-* If you have a value of `none` for your `Normal` bg color, the line numbers
-  will still be visible.
-
-I'm still working on fixing these two bugs.
+If you have a value of `none` for your `Normal` bg color, the plugin won't be
+able to figure out what color to use to hide your UI elements.  To fix this, you
+can [explicitly set the color to use](https://github.com/bilalq/lite-dfm#colors).

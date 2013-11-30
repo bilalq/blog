@@ -7,7 +7,7 @@ published: true
 categories: PHP Laravel OSX
 ---
 
-<small>Note: This guide was written for Laravel 3.</small>
+<small>*Note: This guide was written for Laravel 3.*</small>
 
 In case you haven't heard, PHP is becoming cool again. I say this as a joke, but
 there's a ring of truth to it. With the advent of things like Composer, PSRs,
