@@ -58,7 +58,7 @@ leaving `INSERT` mode usually moves the cursor back a column.
 If you're a tmux user, you may want it to toggle the status bar there as well:
 
 {% highlight vim %}
-nnoremap <Leader>z :LiteDFMToggle<CR>:silent !tmux set status > /dev/null<CR>:redraw!<CR>
+nnoremap <Leader>z :LiteDFMToggle<CR>:silent !tmux set status > /dev/null 2>&1<CR>:redraw!<CR>
 {% endhighlight %}
 
 ## How it Works
