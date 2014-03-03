@@ -2,7 +2,7 @@
 layout: post
 title: "Harmonizing with Vi-Nature"
 date: 2014-03-02 21:00
-comments: false
+comments: true
 published: true
 categories: Vim Productivity
 ---
