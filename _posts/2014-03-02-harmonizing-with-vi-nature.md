@@ -111,8 +111,8 @@ mode, and `Ctrl-l` lets you clear the screen.
 <a name="bash"></a>
 ## bash
 
-If for whatever reason you don't vi-bindings in all of readline and only want to
-affect bash, just include this in your `~/.bashrc` or `~/.bash_profile`:
+If for whatever reason you don't want vi-bindings in all of readline and only 
+want to affect bash, just include this in your `~/.bashrc` or `~/.bash_profile`:
 
 ```bash
 set -o vi
