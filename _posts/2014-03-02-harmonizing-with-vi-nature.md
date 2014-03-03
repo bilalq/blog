@@ -27,39 +27,39 @@ familiar with, along with some instructions on how to get them working.
 <div class="pure-u-1-5">
 <h3>CLI</h3>
 <ul>
-<li><a href="/blog/2014/03/01/harmonizing-with-vi-nature/#readline">readline</a></li>
-<li><a href="/blog/2014/03/01/harmonizing-with-vi-nature/#bash">bash</a></li>
-<li><a href="/blog/2014/03/01/harmonizing-with-vi-nature/#zsh">zsh</a></li>
-<li><a href="/blog/2014/03/01/harmonizing-with-vi-nature/#tmux">tmux</a></li>
+<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#readline">readline</a></li>
+<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#bash">bash</a></li>
+<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#zsh">zsh</a></li>
+<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#tmux">tmux</a></li>
 </ul>
 </div>
 <div class="pure-u-1-5">
 <h3>Browsers</h3>
 <ul>
-<li><a href="/blog/2014/03/01/harmonizing-with-vi-nature/#chrome">Chrome</a></li>
-<li><a href="/blog/2014/03/01/harmonizing-with-vi-nature/#firefox">Firefox</a></li>
+<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#chrome">Chrome</a></li>
+<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#firefox">Firefox</a></li>
 </ul>
 </div>
 <div class="pure-u-1-5">
 <h3>Editors</h3>
 <ul>
-<li><a href="/blog/2014/03/01/harmonizing-with-vi-nature/#sublime">Sublime Text</a></li>
-<li><a href="/blog/2014/03/01/harmonizing-with-vi-nature/#emacs">Emacs</a></li>
+<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#sublime">Sublime Text</a></li>
+<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#emacs">Emacs</a></li>
 </ul>
 </div>
 <div class="pure-u-1-5">
 <h3>IDEs</h3>
 <ul>
-<li><a href="/blog/2014/03/01/harmonizing-with-vi-nature/#eclipse">Eclipse</a></li>
-<li><a href="/blog/2014/03/01/harmonizing-with-vi-nature/#xcode">Xcode</a></li>
-<li><a href="/blog/2014/03/01/harmonizing-with-vi-nature/#intellij">IntelliJ</a></li>
+<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#eclipse">Eclipse</a></li>
+<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#xcode">Xcode</a></li>
+<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#intellij">IntelliJ</a></li>
 </ul>
 </div>
 <div class="pure-u-1-5">
 <h3>Websites</h3>
 <ul>
-<li><a href="/blog/2014/03/01/harmonizing-with-vi-nature/#gmail">Gmail</a></li>
-<li><a href="/blog/2014/03/01/harmonizing-with-vi-nature/#github">GitHub</a></li>
+<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#gmail">Gmail</a></li>
+<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#github">GitHub</a></li>
 </ul>
 </div>
 </div>
@@ -128,10 +128,10 @@ To get vi-bindings in zsh, add this to your `~/.zshrc`:
 bindkey -v
 ```
 
-If you want to also be able to use `jj` to enter command mode, add this line 
+If you want to also be able to use `jj` to enter command mode, add this line
 as well:
 
-```bash 
+```bash
 bindkey -M viins 'jj' vi-cmd-mode
 ```
 
