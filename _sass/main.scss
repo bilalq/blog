@@ -1,7 +1,31 @@
 @import "pure";
 @import "syntax";
 @import "blog";
+@import "categories";
 
 .hidden {
   display: none;
+}
+
+blockquote {
+  /*border-left: 3px solid #bcbcbc;*/
+  border-left: 3px solid #3985b7;
+  margin-left: 30px;
+  font-size: 14px;
+
+  @media (max-width: 767px) {
+    padding: 10px 10px 10px 15px;
+    margin-left: 15px;
+  }
+  @media (max-width: 1280px) {
+    padding: 10px 20px 20px 10px;
+  }
+  padding: 10px 150px 20px 10px;
+
+  small.author {
+    font-family: Helvetica;
+    &:before {
+      content: "—";
+    }
+  }
 }

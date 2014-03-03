@@ -138,25 +138,6 @@ a:focus {
     &:hover { color: white; }
 }
 
-.post-category-productivity {
-  background: #5aba59;
-}
-.post-category-vim {
-  background: #4d85d1;
-}
-.post-category-php {
-  background: #8156a7;
-}
-.post-category-laravel {
-  background: #f47063;
-}
-.post-category-rails {
-  background: #df2d4f;
-}
-.post-category-osx {
-  background: #dc87b3;
-}
-
 .post-images {
     margin: 1em 0;
 }
@@ -236,7 +217,7 @@ h1.brand-title {
     padding-top: 30px;
     padding-bottom: 10px;
   }
-  h1, h2 {
+  h1, h2, h3 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 300;
   }
@@ -286,4 +267,12 @@ h1.brand-title {
       font-size: 0.8em;
       color: #bbb;
     }
+}
+
+$hr-color: rgba(#3985b7, 0.1);
+
+hr {
+  color: $hr-color;
+  background-color: $hr-color;
+  border-color: $hr-color;
 }

@@ -1,0 +1,10 @@
+$categories: productivity #5aba59, vim #4d85d1, php #8156a7, laravel #f47063, rails #df2d4f, osx #dc87b3, nodejs #8cc84b;
+
+@each $category in $categories {
+  $key: nth($category, 1);
+  $val: nth($category, 2);
+
+  .post-category-#{$key} {
+    background: $val;
+  }
+}
