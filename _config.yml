@@ -1,5 +1,5 @@
 name: Bilal Quadri
 markdown: redcarpet
 pygments: true
-exclude: [Gemfile, Gemfile.lock]
+exclude: [Rakefile, Gemfile, Gemfile.lock]
 permalink: /blog/:year/:month/:day/:title
