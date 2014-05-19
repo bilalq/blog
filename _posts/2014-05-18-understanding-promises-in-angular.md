@@ -83,7 +83,7 @@ promise.then(function(res) {
   return res
 })
 .catch(function(err) {
-  $log.error(err.message);
+  $log.error(err.message)
 })
 ```
 
