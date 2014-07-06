@@ -27,39 +27,39 @@ familiar with, along with some instructions on how to get them working.
 <div class="pure-u-1-5">
 <h3>CLI</h3>
 <ul>
-<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#readline">readline</a></li>
-<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#bash">bash</a></li>
-<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#zsh">zsh</a></li>
-<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#tmux">tmux</a></li>
+<li><a href="{{ site.url }}{{ page.url }}#readline">readline</a></li>
+<li><a href="{{ site.url }}{{ page.url }}#bash">bash</a></li>
+<li><a href="{{ site.url }}{{ page.url }}#zsh">zsh</a></li>
+<li><a href="{{ site.url }}{{ page.url }}#tmux">tmux</a></li>
 </ul>
 </div>
 <div class="pure-u-1-5">
 <h3>Browsers</h3>
 <ul>
-<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#chrome">Chrome</a></li>
-<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#firefox">Firefox</a></li>
+<li><a href="{{ site.url }}{{ page.url }}#chrome">Chrome</a></li>
+<li><a href="{{ site.url }}{{ page.url }}#firefox">Firefox</a></li>
 </ul>
 </div>
 <div class="pure-u-1-5">
 <h3>Editors</h3>
 <ul>
-<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#sublime">Sublime Text</a></li>
-<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#emacs">Emacs</a></li>
+<li><a href="{{ site.url }}{{ page.url }}#sublime">Sublime Text</a></li>
+<li><a href="{{ site.url }}{{ page.url }}#emacs">Emacs</a></li>
 </ul>
 </div>
 <div class="pure-u-1-5">
 <h3>IDEs</h3>
 <ul>
-<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#eclipse">Eclipse</a></li>
-<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#xcode">Xcode</a></li>
-<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#intellij">IntelliJ</a></li>
+<li><a href="{{ site.url }}{{ page.url }}#eclipse">Eclipse</a></li>
+<li><a href="{{ site.url }}{{ page.url }}#xcode">Xcode</a></li>
+<li><a href="{{ site.url }}{{ page.url }}#intellij">IntelliJ</a></li>
 </ul>
 </div>
 <div class="pure-u-1-5">
 <h3>Websites</h3>
 <ul>
-<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#gmail">Gmail</a></li>
-<li><a href="/blog/2014/03/02/harmonizing-with-vi-nature/#github">GitHub</a></li>
+<li><a href="{{ site.url }}{{ page.url }}#gmail">Gmail</a></li>
+<li><a href="{{ site.url }}{{ page.url }}#github">GitHub</a></li>
 </ul>
 </div>
 </div>
@@ -111,7 +111,7 @@ mode, and `Ctrl-l` lets you clear the screen.
 <a name="bash"></a>
 ## bash
 
-If for whatever reason you don't want vi-bindings in all of readline and only 
+If for whatever reason you don't want vi-bindings in all of readline and only
 want to affect bash, just include this in your `~/.bashrc` or `~/.bash_profile`:
 
 ```bash
