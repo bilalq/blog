@@ -3,5 +3,5 @@ description: The personal site & blog of Bilal Quadri
 url: http://bilalquadri.com
 markdown: redcarpet
 pygments: true
-exclude: [Rakefile, Gemfile, Gemfile.lock]
+exclude: [Rakefile, Gemfile, Gemfile.lock, s3_website.yml]
 permalink: /blog/:year/:month/:day/:title
