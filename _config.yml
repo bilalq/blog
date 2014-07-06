@@ -1,4 +1,6 @@
 name: Bilal Quadri
+description: The personal site & blog of Bilal Quadri
+url: http://bilalquadri.com
 markdown: redcarpet
 pygments: true
 exclude: [Rakefile, Gemfile, Gemfile.lock]
